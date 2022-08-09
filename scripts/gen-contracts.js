@@ -4,36 +4,18 @@ codegen({
   contracts: [
     {
       name: 'SG721',
-      dir: './path/to/sg721/schema'
+      dir: './contracts/stargaze-sg721/schema'
     },
     {
       name: 'Minter',
-      dir: './path/to/Minter/schema'
+      dir: './contracts/stargaze-minter/schema'
     }
   ],
-  outPath: './path/to/code/src/',
+  outPath: './src/',
   options: {
     bundle: {
       bundleFile: 'index.ts',
       scope: 'contracts'
-    },
-    types: {
-      enabled: true
-    },
-    client: {
-      enabled: true
-    },
-    reactQuery: {
-      enabled: true,
-      optionalClient: true,
-      version: 'v4',
-      mutations: true
-    },
-    recoil: {
-      enabled: false
-    },
-    messageComposer: {
-      enabled: false
     }
   }
 }).then(() => {
