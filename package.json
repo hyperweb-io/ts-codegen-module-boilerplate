@@ -23,6 +23,7 @@
     "build": "npm run build:module && npm run build:main",
     "build:ts": "tsc --project ./tsconfig.json",
     "prepublish": "npm run build",
+    "contracts": "cross-env NODE_ENV=development babel-node scripts/gen-contracts.js",
     "dev": "cross-env NODE_ENV=development babel-node src/index --extensions \".tsx,.ts,.js\"",
     "watch": "cross-env NODE_ENV=development babel-watch src/index --extensions \".tsx,.ts,.js\"",
     "lint": "eslint src --fix",
@@ -69,6 +70,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@cosmjs/cosmwasm-stargate": "^0.28.4"
+    "@cosmjs/cosmwasm-stargate": "^0.28.4",
+    "@cosmwasm/ts-codegen": "^0.9.0"
   }
 }
