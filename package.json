@@ -6,7 +6,6 @@
   "homepage": "https://github.com/__USERNAME__/__MODULENAME__#readme",
   "license": "SEE LICENSE IN LICENSE",
   "main": "main/index.js",
-  "module": "module/index.js",
   "typings": "types/index.d.ts",
   "directories": {
     "lib": "src",
@@ -14,13 +13,10 @@
   },
   "files": [
     "types",
-    "main",
-    "module"
+    "main"
   ],
   "scripts": {
-    "build:main": "cross-env BABEL_ENV=production babel src --out-dir main --delete-dir-on-start --extensions \".tsx,.ts,.js\"",
-    "build:module": "cross-env MODULE=true babel src --out-dir module --delete-dir-on-start  --extensions \".tsx,.ts,.js\"",
-    "build": "npm run build:module && npm run build:main",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir main --delete-dir-on-start --extensions \".tsx,.ts,.js\"",
     "build:ts": "tsc --project ./tsconfig.json",
     "prepublish": "npm run build",
     "contracts": "cross-env NODE_ENV=development babel-node scripts/gen-contracts.js",
@@ -73,6 +69,6 @@
   "dependencies": {
     "@babel/runtime": "^7.18.9",
     "@cosmjs/cosmwasm-stargate": "^0.28.11",
-    "@cosmwasm/ts-codegen": "^0.9.4"
+    "@cosmwasm/ts-codegen": "^0.16.4"
   }
 }
