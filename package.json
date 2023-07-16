@@ -49,9 +49,6 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "29.6.1",
-    "babel-watch": "^7.8.1",
     "cross-env": "^7.0.2",
     "eslint": "8.45.0",
     "eslint-config-prettier": "^8.8.0",
