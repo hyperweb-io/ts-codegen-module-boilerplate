@@ -27,7 +27,10 @@
   {
     "name": "__ACCESS__",
     "message": "Module access?",
-    "choices": ["restricted", "public"],
+    "choices": [
+      "public",
+      "restricted"
+    ],
     "type": "list",
     "required": true
   }
