@@ -15,6 +15,9 @@
     "dist",
     "!CHANGELOG.md"
   ],
+  "nodemonConfig": {
+    "ext": "js,json,ts,tsx"
+  },
   "scripts": {
     "build:cjs": "yarn tsc -p tsconfig.json --outDir dist --module commonjs || true",
     "build:mjs": "yarn tsc -p tsconfig.json --outDir mjs --module es2022 --declaration false || true",
@@ -25,8 +28,8 @@
     "build": "npm run clean && npm run build:cjs && npm run build:mjs && npm run build:rename",
     "codegen": "node scripts/codegen.js",
     "prepare": "npm run build",
-    "dev": "cross-env NODE_ENV=development babel-node src/index --extensions \".tsx,.ts,.js\"",
-    "watch": "cross-env NODE_ENV=development babel-watch src/index --extensions \".tsx,.ts,.js\"",
+    "dev": "ts-node-esm ./src/index.ts",
+    "watch": "nodemon --exec \"yarn dev\"",
     "lint": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -70,6 +73,8 @@
     "publish-scripts": "0.1.0",
     "rimraf": "^5.0.0",
     "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
