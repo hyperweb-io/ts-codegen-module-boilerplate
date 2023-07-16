@@ -1,4 +1,4 @@
-import codegen from '@cosmwasm/ts-codegen';
+const codegen = require('@cosmwasm/ts-codegen').default;
 
 codegen({
   contracts: [
