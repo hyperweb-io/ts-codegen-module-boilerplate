@@ -16,6 +16,12 @@ codegen({
     bundle: {
       bundleFile: 'index.ts',
       scope: 'contracts'
+    },
+    messageComposer: {
+      enabled: true
+    },
+    useContractsHooks: {
+      enabled: false // if you enable this, add react!
     }
   }
 }).then(() => {
