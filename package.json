@@ -45,7 +45,7 @@
     "url": "https://github.com/__USERNAME__/__MODULENAME__/issues"
   },
   "devDependencies": {
-    "@cosmwasm/ts-codegen": "^0.33.0",
+    "@cosmwasm/ts-codegen": "^1.13.1",
     "@types/jest": "^29.5.3",
     "eslint": "8.45.0",
     "eslint-config-prettier": "^8.8.0",
